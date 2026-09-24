@@ -71,11 +71,12 @@
 
 (function(){
   var lb=document.querySelector('.lb'), im=lb.querySelector('img'), cap=lb.querySelector('.lb-cap');
-  function open(src,t){ im.src=src; cap.textContent=t||''; lb.classList.add('open'); lb.scrollTop=0; document.body.style.overflow='hidden'; }
+  function open(src,t){ im.src=src; im.classList.remove('native'); cap.textContent=t||''; lb.classList.add('open'); lb.scrollTop=0; document.body.style.overflow='hidden'; }
   function close(){ lb.classList.remove('open'); document.body.style.overflow=''; }
   document.querySelectorAll('.zoomable').forEach(function(f){
     f.addEventListener('click', function(){ var i=f.querySelector('img'); if(i) open(i.src, i.alt); });
   });
+  im.addEventListener('click', function(e){ e.stopPropagation(); im.classList.toggle('native'); });
   lb.querySelector('.lb-close').addEventListener('click', function(e){ e.stopPropagation(); close(); });
   lb.addEventListener('click', function(e){ if(e.target===lb) close(); });
   document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
@@ -114,9 +115,15 @@
 (function(){
   var root=document.getElementById('fabrix-shots'); if(!root) return;
   var chips=root.querySelectorAll('#fx-chips .lchip'), grps=root.querySelectorAll('.fx-group');
+  function openG(g,on){ g.classList.toggle('open',on); g.querySelector('.fx-head').setAttribute('aria-expanded',on?'true':'false'); }
+  grps.forEach(function(g){ g.querySelector('.fx-head').addEventListener('click',function(){ openG(g,!g.classList.contains('open')); }); });
   chips.forEach(function(c){ c.addEventListener('click',function(){
     chips.forEach(function(x){x.classList.toggle('on',x===c);});
     var k=c.getAttribute('data-fg');
-    grps.forEach(function(g){ g.hidden = !(k==='all' || g.getAttribute('data-fg')===k); });
+    grps.forEach(function(g,i){
+      var show = k==='all' || g.getAttribute('data-fg')===k;
+      g.hidden=!show;
+      openG(g, k==='all' ? i===0 : show);
+    });
   }); });
 })();

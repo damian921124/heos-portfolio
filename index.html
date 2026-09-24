@@ -325,23 +325,28 @@
           <button type="button" class="lchip" data-fg="catalog">카탈로그<span>(1)</span></button>
         </div>
 
-        <div class="fx-group" data-fg="guide">
-          <div class="fx-subhead">공통가이드</div>
+        <div class="fx-group open" data-fg="guide">
+          <button type="button" class="fx-head" aria-expanded="true"><span class="fx-subhead">공통가이드</span><span class="lcount">1</span><span class="lpm" aria-hidden="true"></span></button>
+          <div class="fx-body">
           <figure class="zoomable fx-item" style="margin-bottom:0"><div class="frame" style="aspect-ratio:1858/2560"><img src="images/fabrix-common-ui-ux-guide.jpg" alt="FabriX 공통 UI/UX 가이드" loading="lazy" style="object-fit:contain"></div><figcaption><b>공통 UI/UX 가이드</b>마이페이지 · 카탈로그 · 워크스페이스 · 공통 컴포넌트 영역별 가이드 세트</figcaption></figure>
+          </div>
         </div>
 
         <div class="fx-group" data-fg="mypage">
-          <div class="fx-subhead">마이페이지</div>
+          <button type="button" class="fx-head" aria-expanded="false"><span class="fx-subhead">마이페이지</span><span class="lcount">4</span><span class="lpm" aria-hidden="true"></span></button>
+          <div class="fx-body">
           <div class="shot-grid pair">
 <figure class="zoomable fx-item"><div class="frame"><img src="images/fabrix-mypage-my-catalog.jpg" alt="FabriX My Catalog" loading="lazy" style="object-fit:contain"></div><figcaption><b>My Catalog</b>카탈로그 타입 필터 · 정렬 · Status 노출</figcaption></figure>
             <figure class="zoomable fx-item"><div class="frame"><img src="images/fabrix-mypage-default-catalog.jpg" alt="FabriX Default Catalog" loading="lazy" style="object-fit:contain"></div><figcaption><b>Default Catalog</b>전 사용자에게 노출되는 기본 카탈로그 목록</figcaption></figure>
             <figure class="zoomable fx-item"><div class="frame"><img src="images/fabrix-mypage-bookmark.jpg" alt="FabriX Bookmark" loading="lazy" style="object-fit:contain"></div><figcaption><b>Bookmark</b>북마크한 카탈로그 목록 · List/Card 뷰 전환</figcaption></figure>
             <figure class="zoomable fx-item"><div class="frame"><img src="images/fabrix-mypage-credential.jpg" alt="FabriX Credential" loading="lazy" style="object-fit:contain"></div><figcaption><b>Credential</b>연동 시스템 Credential 등록 · 관리</figcaption></figure>
           </div>
+          </div>
         </div>
 
         <div class="fx-group" data-fg="workspace">
-          <div class="fx-subhead">워크스페이스</div>
+          <button type="button" class="fx-head" aria-expanded="false"><span class="fx-subhead">워크스페이스</span><span class="lcount">10</span><span class="lpm" aria-hidden="true"></span></button>
+          <div class="fx-body">
           <div class="shot-grid pair">
 <figure class="zoomable fx-item"><div class="frame"><img src="images/fabrix-workspace-my-list.jpg" alt="FabriX My Workspace" loading="lazy" style="object-fit:contain"></div><figcaption><b>My Workspace</b>개인 · 팀 워크스페이스 카탈로그 목록</figcaption></figure>
             <figure class="zoomable fx-item"><div class="frame"><img src="images/fabrix-workspace-team-catalog-list.jpg" alt="FabriX Team Workspace Catalog" loading="lazy" style="object-fit:contain"></div><figcaption><b>Team Workspace — Catalog</b>팀 워크스페이스 내 카탈로그 관리</figcaption></figure>
@@ -354,15 +359,18 @@
             <figure class="zoomable fx-item"><div class="frame"><img src="images/fabrix-workspace-policy-change.jpg" alt="FabriX Workspace Policy Change" loading="lazy" style="object-fit:contain"></div><figcaption><b>생성 중 정책 변경 공통 처리</b>자동생성 ↔ 승인요청 전환 시 Alert 및 팝업 전환 정의</figcaption></figure>
             <figure class="zoomable fx-item"><div class="frame"><img src="images/fabrix-workspace-case-summary.jpg" alt="FabriX Workspace Case Summary" loading="lazy" style="object-fit:contain"></div><figcaption><b>승인 프로세스 Case 종합</b>승인 대기 · 기각 · 수정 재요청 3가지 케이스</figcaption></figure>
           </div>
+          </div>
         </div>
 
         <div class="fx-group" data-fg="catalog">
-          <div class="fx-subhead">카탈로그</div>
+          <button type="button" class="fx-head" aria-expanded="false"><span class="fx-subhead">카탈로그</span><span class="lcount">1</span><span class="lpm" aria-hidden="true"></span></button>
+          <div class="fx-body">
           <div class="shot-grid pair">
             <figure>
               <div class="frame"><img src="images/fabrix-catalog-design.png" alt="" onerror="this.remove()"><div class="ph"><b>설계서</b><code>images/fabrix-catalog-design.png</code></div></div>
               <figcaption><b>카탈로그 등록 · 수정 · 상세</b>준비 중 — 업로드 예정</figcaption>
             </figure>
+          </div>
           </div>
         </div>
         </div>
@@ -553,7 +561,7 @@
 
 
 
-<div class="lb" role="dialog" aria-modal="true" aria-label="이미지 크게 보기"><span class="lb-cap"></span><button class="lb-close" type="button" aria-label="닫기">×</button><img alt=""></div>
+<div class="lb" role="dialog" aria-modal="true" aria-label="이미지 크게 보기"><span class="lb-cap"></span><button class="lb-close" type="button" aria-label="닫기">×</button><img alt=""><span class="lb-hint">이미지를 클릭하면 원본 크기로 확대됩니다</span></div>
 
 <div class="lb2" role="dialog" aria-modal="true" aria-label="화면설계서와 라이브 비교"><div class="lb2-bar"><span class="lb2-title"></span><button type="button" class="lb2-close" aria-label="닫기">×</button></div><div class="lb2-compare"><figure class="lb2-pane"><figcaption>화면설계서</figcaption><img class="lb2-img-sb" alt=""></figure><figure class="lb2-pane"><figcaption>라이브</figcaption><img class="lb2-img-live" alt=""></figure></div></div>
 <script src="js/main.js" defer></script>
