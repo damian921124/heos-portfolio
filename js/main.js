@@ -71,10 +71,23 @@
 
 (function(){
   var lb=document.querySelector('.lb'), im=lb.querySelector('img'), cap=lb.querySelector('.lb-cap');
-  function open(src,t,startNative){ im.src=src; im.classList.toggle('native',!!startNative); cap.textContent=t||''; lb.classList.add('open'); lb.scrollTop=0; document.body.style.overflow='hidden'; }
+  function open(src,title,desc,startNative){
+    im.src=src; im.classList.toggle('native',!!startNative);
+    cap.innerHTML = title ? ('<b></b>'+(desc?'<span></span>':'')) : '';
+    if(title) cap.querySelector('b').textContent = title;
+    if(desc) cap.querySelector('span').textContent = desc;
+    lb.classList.add('open'); lb.scrollTop=0; document.body.style.overflow='hidden';
+  }
   function close(){ lb.classList.remove('open'); document.body.style.overflow=''; }
   document.querySelectorAll('.zoomable').forEach(function(f){
-    f.addEventListener('click', function(){ var i=f.querySelector('img'); if(i) open(i.src, i.alt, i.hasAttribute('data-zoom-native')); });
+    f.addEventListener('click', function(){
+      var i=f.querySelector('img'); if(!i) return;
+      var capEl=f.querySelector('figcaption'), titleEl=capEl?capEl.querySelector('b'):null;
+      var title = titleEl ? titleEl.textContent : i.alt;
+      var desc = '';
+      if(capEl){ desc = capEl.textContent.slice(titleEl?titleEl.textContent.length:0).trim(); }
+      open(i.src, title, desc, i.hasAttribute('data-zoom-native'));
+    });
   });
   im.addEventListener('click', function(e){ e.stopPropagation(); im.classList.toggle('native'); });
   lb.querySelector('.lb-close').addEventListener('click', function(e){ e.stopPropagation(); close(); });
