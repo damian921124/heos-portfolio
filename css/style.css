@@ -70,8 +70,12 @@ a{color:inherit}
 
 /* ─── Home 하이라이트 카드 ─── */
 .hl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:4px}
-.hl-card{display:flex;flex-direction:column;gap:10px;background:var(--paper);padding:26px 24px 24px;text-decoration:none;color:inherit;transition:background .15s}
+.hl-card{display:flex;flex-direction:column;background:var(--paper);text-decoration:none;color:inherit;transition:background .15s}
 .hl-card:hover{background:var(--wash)}
+.hl-thumb{display:block;aspect-ratio:16/10;overflow:hidden;background:var(--wash);border-bottom:1px solid var(--rule)}
+.hl-thumb img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .35s ease}
+.hl-card:hover .hl-thumb img{transform:scale(1.03)}
+.hl-body{display:flex;flex-direction:column;gap:10px;padding:22px 24px 24px}
 .hl-no{font-size:12px;color:var(--mute);font-weight:500}
 .hl-card h3{margin:0;font-size:19px;line-height:1.4;font-weight:600;letter-spacing:-.02em;max-width:none}
 .hl-card p{margin:0;color:var(--graphite);font-size:14px;line-height:1.8;font-weight:300;flex:1}
