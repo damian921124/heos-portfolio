@@ -134,7 +134,7 @@
             <em>owner · admin · user 3단계와 그룹 단위 접근 정책을 먼저 문서화</em></li>
           <li>운영 리스크를 기능으로
             <em>API 사용량 상한 · 자동 차단 · 건별 비용 추적을 요건에 포함</em></li>
-          <li>프롬프트 없이 쓰는 구조
+          <li>미리 만들어진 데이터로 영상/이미지를 빠르게 생성
             <em>모드별 프리셋 49종과 즐겨찾기로 옵션만 고르면 결과가 나오게</em></li>
           <li>생성부터 편집까지 한 흐름으로
             <em>영상 · 이미지 · 립싱크 생성 후 클립 선택 → 스타일 · 오디오 → 순서 · 자막 3단계로 편집하고 AI 고지 문구까지 삽입</em></li>
@@ -150,18 +150,18 @@
 
       <div class="detail">
         <div class="label">회고</div>
-        <p class="lede" style="margin:0;font-weight:400;font-size:16px">권한과 비용을 먼저 정의한 덕에 사내 배포 논의에서 보안 · 비용 질문에 바로 답할 수 있었습니다. 다만 사용 데이터가 쌓이기 전이라 효과를 수치로 보여줄 지표는 아직 숙제입니다.</p>
+        <p class="lede" style="margin:0;font-weight:400;font-size:16px">권한과 비용 구조는 먼저 정의했지만, 데이터베이스 · 스토리지 · API 비용을 회사 계정이 아닌 개인 계정에 연결해 운영하고 있어 사내에서 정식으로 쓸 수 있는 환경까지는 아직 구축하지 못한 점이 숙제로 남아 있습니다.</p>
       </div>
 
       <div class="shots">
         <div class="label">라이브 화면</div>
         <div class="shot-grid tri">
-          <figure class="zoomable"><div class="frame"><img src="images/presetflow-home.jpg" alt="홈" loading="lazy"></div><figcaption><b>홈</b>영상 · 이미지 · 프리셋으로 바로 진입하고 최근 결과 확인</figcaption></figure>
-          <figure class="zoomable"><div class="frame"><img src="images/presetflow-preset.jpg" alt="프리셋" loading="lazy"></div><figcaption><b>프리셋</b>모션 컨트롤 · 아바타 · 이미지 에셋 카테고리와 즐겨찾기</figcaption></figure>
-          <figure class="zoomable"><div class="frame"><img src="images/presetflow-video-gen.jpg" alt="영상 생성" loading="lazy"></div><figcaption><b>영상 생성</b>재생 시간 · 컷 수 · 비율 · 멀티샷 · 제외 요소 옵션</figcaption></figure>
-          <figure class="zoomable"><div class="frame"><img src="images/presetflow-image-gen.jpg" alt="이미지 생성" loading="lazy"></div><figcaption><b>이미지 생성</b>컷 수 · 화면 비율 · 레퍼런스 이미지 업로드</figcaption></figure>
-          <figure class="zoomable"><div class="frame"><img src="images/presetflow-video-edit.jpg" alt="영상 편집" loading="lazy"></div><figcaption><b>영상 편집</b>클립 선택 → 스타일 · 오디오 → 순서 · 자막 3단계 편집</figcaption></figure>
-          <figure class="zoomable"><div class="frame"><img src="images/presetflow-user-admin.jpg" alt="사용자 관리" loading="lazy"></div><figcaption><b>사용자 관리</b>그룹 단위로 최고 관리자 · 관리자 · 일반 권한 설정</figcaption></figure>
+          <figure class="zoomable"><div class="frame"><img src="images/presetflow-home.jpg" alt="홈" loading="lazy"><span class="larrow" aria-hidden="true"></span></div><figcaption><b>홈</b>영상 · 이미지 · 프리셋으로 바로 진입하고 최근 결과 확인</figcaption></figure>
+          <figure class="zoomable"><div class="frame"><img src="images/presetflow-preset.jpg" alt="프리셋" loading="lazy"><span class="larrow" aria-hidden="true"></span></div><figcaption><b>프리셋</b>모션 컨트롤 · 아바타 · 이미지 에셋별 하위 카테고리와 즐겨찾기 프리셋</figcaption></figure>
+          <figure class="zoomable"><div class="frame"><img src="images/presetflow-video-gen.jpg" alt="영상 생성" loading="lazy"><span class="larrow" aria-hidden="true"></span></div><figcaption><b>영상 생성</b>재생 시간 · 컷 수 · 비율 · 멀티샷 · 제외 요소 옵션</figcaption></figure>
+          <figure class="zoomable"><div class="frame"><img src="images/presetflow-image-gen.jpg" alt="이미지 생성" loading="lazy"><span class="larrow" aria-hidden="true"></span></div><figcaption><b>이미지 생성</b>컷 수 · 화면 비율 · 레퍼런스 이미지 업로드</figcaption></figure>
+          <figure class="zoomable"><div class="frame"><img src="images/presetflow-video-edit.jpg" alt="영상 편집" loading="lazy"><span class="larrow" aria-hidden="true"></span></div><figcaption><b>영상 편집</b>클립 선택 → 스타일 · 오디오 → 순서 · 자막 3단계 편집</figcaption></figure>
+          <figure class="zoomable"><div class="frame"><img src="images/presetflow-user-admin.jpg" alt="사용자 관리" loading="lazy"><span class="larrow" aria-hidden="true"></span></div><figcaption><b>사용자 관리</b>그룹 단위로 최고 관리자 · 관리자 · 일반 권한 설정</figcaption></figure>
         </div>
       </div>
     </article>
@@ -210,7 +210,7 @@
 
       <div class="detail">
         <div class="label">회고</div>
-        <p class="lede" style="margin:0;font-weight:400;font-size:16px">운영 업무를 진행하며 발견한 불편 사항들을 KDP-BO 플랫폼 · 삼성닷컴 프론트 기능 개선안으로 제안까지 진행했지만, 실제 기능 개선으로 이어간 적은 없었습니다. 앞으로는 제안을 실행까지 연결하는 데 더 적극적으로 움직여야겠다고 생각합니다.</p>
+        <p class="lede" style="margin:0;font-weight:400;font-size:16px">운영 업무를 진행하며 발견한 불편 사항들을 KDP-BO 플랫폼 · 삼성닷컴 프론트 기능 개선안으로 제안까지 진행했습니다. 다만 실제 기능 개선으로 이어지기까지는 여러 구조적 단계를 거쳐야 하는 한계가 있었고, 이를 넘어서려면 더 치밀하게 고민한 제안이 필요하다는 걸 느꼈습니다.</p>
       </div>
     </article>
     <!-- 03 -->
@@ -258,7 +258,7 @@
 
       <div class="detail">
         <div class="label">회고</div>
-        <p class="lede" style="margin:0;font-weight:400;font-size:16px">콘텐츠를 화면이 아니라 운영 관점에서 나눈 판단이 주효했습니다.<br>테스트 직전 퇴사로 오픈 후 지표를 직접 확인하지 못한 점은 아쉽습니다.</p>
+        <p class="lede" style="margin:0;font-weight:400;font-size:16px">콘텐츠를 화면이 아니라 운영 관점에서 나눈 판단이 주효했습니다.<br>다만 테스트 직전 더 나은 기회로 이직하게 되면서, 오픈 후 실제 지표를 직접 확인하지 못한 점은 아쉬움으로 남습니다.</p>
       </div>
 
       <div class="shots">

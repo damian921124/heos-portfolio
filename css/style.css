@@ -251,8 +251,8 @@ figcaption b{display:block;font-weight:600;color:var(--ink);font-size:13px;margi
 .zoomable{cursor:zoom-in}
 .zoomable .frame{transition:border-color .15s}
 .zoomable:hover .frame{border-color:var(--ink)}
-.fx-item .larrow{opacity:0;box-shadow:0 2px 10px rgba(0,0,0,.22);transition:opacity .2s ease,transform .2s ease}
-.fx-item:hover .larrow{opacity:1;transform:rotate(90deg)}
+.zoomable .larrow{opacity:0;box-shadow:0 2px 10px rgba(0,0,0,.22);transition:opacity .2s ease,transform .2s ease}
+.zoomable:hover .larrow{opacity:1;transform:rotate(90deg)}
 .gallery{margin-top:0}
 .ghead{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
 .glabel{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);opacity:.55}
