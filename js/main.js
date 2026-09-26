@@ -192,3 +192,24 @@
     });
   }); });
 })();
+
+(function(){
+  var VISIBLE = 9;
+  document.querySelectorAll('.fx-group .shot-grid').forEach(function(grid){
+    var items = Array.prototype.slice.call(grid.children).filter(function(el){ return el.classList.contains('fx-item'); });
+    if (items.length <= VISIBLE) return;
+    items.slice(VISIBLE).forEach(function(it){ it.classList.add('fx-item-extra'); });
+    var wrap = document.createElement('div');
+    wrap.className = 'fx-more-wrap';
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'fx-more';
+    btn.textContent = '더보기';
+    btn.addEventListener('click', function(){
+      items.forEach(function(it){ it.classList.remove('fx-item-extra'); });
+      wrap.remove();
+    });
+    wrap.appendChild(btn);
+    grid.insertAdjacentElement('afterend', wrap);
+  });
+})();
