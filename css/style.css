@@ -207,6 +207,9 @@ section{padding:36px 0;border-bottom:1px solid var(--rule)}
 }
 .detail ol li em{display:block;font-style:normal;color:var(--graphite);font-weight:300;font-size:15px;margin-top:7px;line-height:1.9;max-width:36em}
 @media(max-width:860px){.detail{grid-template-columns:1fr;gap:14px}}
+.simple-list{margin:0;padding:0;list-style:none;max-width:40em}
+.simple-list li{position:relative;padding:5px 0 5px 16px;font-size:15px;font-weight:300;color:var(--graphite);line-height:1.8}
+.simple-list li::before{content:'–';position:absolute;left:0;color:var(--mute)}
 
 .result{display:grid;grid-template-columns:200px 1fr;gap:24px;margin-bottom:18px}
 .result-box{background:var(--wash);padding:12px 18px;border-left:2px solid var(--ink)}
